@@ -1,4 +1,4 @@
-package resetMap
+package reset_map
 
 const reuseThreshold = 100_0000
 
