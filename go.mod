@@ -1,3 +1,3 @@
-module github.com/otabeknosirov/resetMap
+module github.com/otabeknosirov/reset
 
 go 1.22
