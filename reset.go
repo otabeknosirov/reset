@@ -2,7 +2,7 @@ package reset_map
 
 const reuseThreshold = 100_0000
 
-// clearMap clears all entries in the given map.
+// ClearMap clears all entries in the given map.
 // For small maps (length ≤ reuseThreshold),
 // it deletes keys to reuse the existing map
 // and keep its allocated capacity.
@@ -12,7 +12,7 @@ const reuseThreshold = 100_0000
 // approach balances memory usage and performance,
 // since Go maps do not expose their internal
 // capacity like slices.
-func clearMap[K comparable, V any](m *map[K]V) {
+func ClearMap[K comparable, V any](m *map[K]V) {
 	if len(*m) > reuseThreshold {
 		*m = make(map[K]V)
 	} else {
